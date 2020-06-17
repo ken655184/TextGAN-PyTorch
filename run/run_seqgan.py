@@ -13,7 +13,7 @@ from subprocess import call
 import os
 
 # Job id and gpu_id
-if len(sys.argv) > 2:
+"""if len(sys.argv) > 2:
     job_id = int(sys.argv[1])
     gpu_id = str(sys.argv[2])
     print('job_id: {}, gpu_id: {}'.format(job_id, gpu_id))
@@ -21,14 +21,14 @@ elif len(sys.argv) > 1:
     job_id = int(sys.argv[1])
     gpu_id = 0
     print('job_id: {}, missing gpu_id (use default {})'.format(job_id, gpu_id))
-else:
-    job_id = 0
-    gpu_id = 0
-    print('Missing argument: job_id and gpu_id. Use default job_id: {}, gpu_id: {}'.format(job_id, gpu_id))
+else:"""
+job_id = 0
+gpu_id = 0
+print('Use default job_id: {}, gpu_id: {}'.format(job_id, gpu_id))
 
 # Executables
-executable = 'python'  # specify your own python interpreter path here
-rootdir = '../'
+executable = 'C:/Users/N7/Anaconda3/python.exe'  # specify your own python interpreter path here
+rootdir = 'C:/Users/N7/Documents/GitHub/TextGAN-PyTorch'
 scriptname = 'main.py'
 
 # ===Program===
@@ -43,16 +43,16 @@ ADV_train_epoch = 200
 tips = 'SeqGAN experiments'
 
 # ===Oracle  or Real===
-if_real_data = [int(False), int(True), int(True)]
-dataset = ['oracle', 'image_coco', 'emnlp_news']
-vocab_size = [5000, 0, 0]
+if_real_data = [int(True)]
+dataset = ['won']
+vocab_size = [10000]
 
 # ===Basic Param===
 data_shuffle = int(False)
 model_type = 'vanilla'
 gen_init = 'normal'
 dis_init = 'uniform'
-samples_num = 10000
+samples_num = 5000
 batch_size = 64
 max_seq_len = 20
 gen_lr = 0.01
