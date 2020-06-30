@@ -27,7 +27,7 @@ gpu_id = 0
 print('Use default job_id: {}, gpu_id: {}'.format(job_id, gpu_id))
 
 # Executables
-executable = 'C:/Users/N7/Anaconda3/python.exe'  # specify your own python interpreter path here
+executable = 'C:/Users/N7/Anaconda3/envs/pytorch/python.exe'  # specify your own python interpreter path here
 rootdir = 'C:/Users/N7/Documents/GitHub/TextGAN-PyTorch'
 scriptname = 'main.py'
 

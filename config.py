@@ -28,8 +28,8 @@ gen_init = 'truncated_normal'  # normal, uniform, truncated_normal
 dis_init = 'uniform'  # normal, uniform, truncated_normal
 
 # ===Oracle or Real, type===
-if_real_data = False  # if use real data
-dataset = 'oracle'  # oracle, image_coco, emnlp_news, amazon_app_book, mr15
+if_real_data = True  # if use real data
+dataset = 'won'  # oracle, image_coco, emnlp_news, amazon_app_book, mr15
 model_type = 'vanilla'  # vanilla, RMC (custom)
 loss_type = 'rsgan'  # standard, JS, KL, hinge, tv, LS, rsgan (for RelGAN)
 vocab_size = 5000  # oracle: 5000, coco: 6613, emnlp: 5255, amazon_app_book: 6418, mr15: 6289
@@ -162,7 +162,8 @@ def init_param(opt):
         pretrained_clas_path, gen_init, dis_init, multi_oracle_samples_path, k_label, cat_train_data, cat_test_data, \
         use_nll_oracle, use_nll_gen, use_nll_div, use_bleu, use_self_bleu, use_clas_acc, use_ppl
 
-    if_test = True if opt.if_test == 1 else False
+    if_test = True if 
+    opt.if_test == 1 else False
     run_model = opt.run_model
     k_label = opt.k_label
     dataset = opt.dataset
